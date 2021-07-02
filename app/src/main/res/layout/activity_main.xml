@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/back">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="361dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/blur3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="53dp"
+                android:layout_height="59dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:fontFamily="@font/allerta"
+                android:text="Welcome to healthiest restaurant"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:backgroundTint="@color/black"
+                android:hint="+91"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/edt_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:inputType="phone"
+                android:backgroundTint="@color/black"
+                android:hint="Enter your mobile number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Or"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="3dp">
+
+            <ImageButton
+                android:id="@+id/google_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/icons_google" />
+
+            <ImageButton
+                android:id="@+id/facebook_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@+id/google_btn"
+                android:background="@drawable/icons_facebook"
+
+                />
+
+            <ImageButton
+                android:id="@+id/insta_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/facebook_btn"
+                android:background="@drawable/icons_instagram5"
+                android:scaleX="1.1"
+                android:scaleY="1.09" />
+
+            <ImageButton
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/icons_arrow"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
