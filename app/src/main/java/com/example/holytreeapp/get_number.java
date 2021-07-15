@@ -1,4 +1,4 @@
-package com.example.holytree;
+package com.example.holytreeapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,6 +24,7 @@ public class get_number extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_number);
+        //getSupportActionBar().hide();
 
         final Button get_otp_btn = findViewById(R.id.get_otp_btn);
         final EditText input_number = findViewById(R.id.input_number);

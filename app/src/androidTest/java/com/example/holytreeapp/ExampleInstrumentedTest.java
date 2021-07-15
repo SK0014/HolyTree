@@ -1,4 +1,4 @@
-package com.example.holytree;
+package com.example.holytreeapp;
 
 import android.content.Context;
 

@@ -1,4 +1,4 @@
-package com.example.holytree;
+package com.example.holytreeapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +32,9 @@ public class SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        getSupportActionBar().hide();
         edtName=findViewById(R.id.edt_name);
+        int Key=getIntent().getIntExtra("key",0);
         edtmail=findViewById(R.id.edt_email);
         edtadd=findViewById(R.id.edt_add);
         edtcno=findViewById(R.id.edt_no);
@@ -45,7 +47,10 @@ public class SignUp extends AppCompatActivity {
                if(!edtcno.getText().toString().isEmpty()&&!edtName.getText().toString().isEmpty()&&!edtadd.getText().toString().isEmpty()
                        &&!edtmail.getText().toString().isEmpty()){
                    UserModel userModel=new UserModel(edtName.getText().toString(),edtcno.getText().toString(),edtadd.getText().toString(),edtmail.getText().toString());
-                   DocumentReference documentReference=fb.collection("Users").document(edtcno.getText().toString());
+                   DocumentReference documentReference;
+                   if(Key==0){documentReference=fb.collection("Users").document(edtcno.getText().toString());}
+                   else{documentReference=fb.collection("Users").document(edtmail.getText().toString());}
+
                    Map<String,Object> user_data=new HashMap<>();
                    String name=edtName.getText().toString();
                    String mail=edtmail.getText().toString();
@@ -59,7 +64,8 @@ public class SignUp extends AppCompatActivity {
                        @Override
                        public void onSuccess(Void unused) {
                            Toast.makeText(SignUp.this, "Successfully Signed up", Toast.LENGTH_SHORT).show();
-                           Intent i=new Intent(SignUp.this,after_otp_verification.class);
+                           Intent i=new Intent(SignUp.this, MainApp.class);
+                           i.putExtra("mb",no);
                            startActivity(i);
                        }
                    }).addOnFailureListener(new OnFailureListener() {

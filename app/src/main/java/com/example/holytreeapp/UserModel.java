@@ -1,4 +1,4 @@
-package com.example.holytree;
+package com.example.holytreeapp;
 
 public class UserModel {
 String fname;

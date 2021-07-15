@@ -1,4 +1,4 @@
-package com.example.holytree;
+package com.example.holytreeapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -44,6 +43,7 @@ public class verify_otp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify_otp);
+        //getSupportActionBar().hide();
 
         TextView display_mobile_number = findViewById(R.id.enteredmobilenumber);
         display_mobile_number.setText(String.format("+91-%s",getIntent().getStringExtra("mobile")));
@@ -104,13 +104,15 @@ public class verify_otp extends AppCompatActivity {
                                                                 String name=user.getFname();
                                                                 String adr=user.getAddress();
                                                                 if(!name.isEmpty()&&!adr.isEmpty()){
-                                                                    Intent intent = new Intent(verify_otp.this,after_otp_verification.class);
+                                                                    Intent intent = new Intent(verify_otp.this, MainApp.class);
+                                                                    intent.putExtra("mob",getIntent().getStringExtra("mobile"));
                                                                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                                                     startActivity(intent);
                                                                 }
                                                                 else{
                                                                     Intent intent = new Intent(verify_otp.this,SignUp.class);
                                                                     intent.putExtra("mob",getIntent().getStringExtra("mobile"));
+                                                                    intent.putExtra("key",0);
                                                                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                                                     startActivity(intent);
                                                                 }
@@ -128,6 +130,7 @@ public class verify_otp extends AppCompatActivity {
                                                         Intent intent = new Intent(verify_otp.this,SignUp.class);
                                                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                                         intent.putExtra("mob",getIntent().getStringExtra("mobile"));
+                                                        intent.putExtra("key",0);
                                                         startActivity(intent);
                                                     }
                                                 }

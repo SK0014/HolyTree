@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="27dp"
                 android:fontFamily="@font/allerta"
-                android:text="Welcome to healthiest restaurant"
+                android:text="Welcome to Oasis of Deliciousness"
                 android:textColor="@color/white"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -98,28 +98,7 @@
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/icons_google" />
-
-            <ImageButton
-                android:id="@+id/facebook_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="8dp"
-                android:layout_toRightOf="@+id/google_btn"
-                android:background="@drawable/icons_facebook"
-
-                />
-
-            <ImageButton
-                android:id="@+id/insta_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="8dp"
-                android:layout_toRightOf="@id/facebook_btn"
-                android:background="@drawable/icons_instagram5"
-                android:scaleX="1.1"
-                android:scaleY="1.09" />
+                android:background="@drawable/icons_google"/>
 
             <ImageButton
                 android:id="@+id/btn_login"
