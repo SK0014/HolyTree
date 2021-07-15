@@ -29,6 +29,7 @@ public class ProfileUpdate extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_update);
         fb=FirebaseFirestore.getInstance();
+        getSupportActionBar().hide();
         phone=findViewById(R.id.upd_mob_no);
         update=findViewById(R.id.up_bt);
         address=findViewById(R.id.edt_new_add);

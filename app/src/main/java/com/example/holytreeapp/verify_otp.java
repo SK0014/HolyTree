@@ -43,7 +43,7 @@ public class verify_otp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify_otp);
-        //getSupportActionBar().hide();
+        getSupportActionBar().hide();
 
         TextView display_mobile_number = findViewById(R.id.enteredmobilenumber);
         display_mobile_number.setText(String.format("+91-%s",getIntent().getStringExtra("mobile")));
