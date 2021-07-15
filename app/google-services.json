@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "998083235833",
+    "project_id": "holy-tree-73664",
+    "storage_bucket": "holy-tree-73664.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998083235833:android:6aa1beb0c55ea79dc0f728",
+        "android_client_info": {
+          "package_name": "com.example.holytreeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998083235833-s0rhqantnlnq8t0e541cfo4ts6tv7pod.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.holytreeapp",
+            "certificate_hash": "8c3c7fb594393312c61c3d95ceede025a7c564b3"
+          }
+        },
+        {
+          "client_id": "998083235833-hg4mtc16ji77p6htdonbork9agj279nk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2ew9VzkNdZk5xaOTkUAbSPVMD6VG38Pg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998083235833-hg4mtc16ji77p6htdonbork9agj279nk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

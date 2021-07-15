@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="10dp"
+    >
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:id="@+id/card_item"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        android:elevation="8dp"
+        android:background="@color/white"
+        app:cardElevation="15dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cart_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="Order1"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:fontFamily="@font/poppins_light"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                >
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="@color/orange"
+                    android:foreground="@drawable/add"
+                    app:backgroundTint="#FFFFFF"
+                    android:id="@+id/total_add"
+                    android:elevation="10dp"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:id="@+id/cart_qnt"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
+                    android:backgroundTint="@color/black"
+                    android:text="0"
+                    android:textSize="20dp"
+                    android:layout_gravity="bottom"
+                    />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="@color/orange"
+                    android:foreground="@drawable/ic_baseline_horizontal_rule_24"
+                    app:backgroundTint="#FFFFFF"
+                    android:layout_marginRight="8dp"
+                    android:id="@+id/total_remove"
+                    android:elevation="10dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs "
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:id="@+id/cart_inr"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="150dp"
+                    android:paddingBottom="2dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="150"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:id="@+id/cart_prc"
+                    android:layout_gravity="center_vertical"
+
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

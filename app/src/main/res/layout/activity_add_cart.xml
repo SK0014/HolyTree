@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCart"
+    android:background="@color/white"
+    >
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/title"
+        android:layout_marginBottom="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cart"
+            android:textSize="40dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:id="@+id/title_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/grocery_cart"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        />
+
+    <Button
+        android:id="@+id/pay"
+        android:backgroundTint="@color/orange"
+        android:text="Pay"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_light"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
