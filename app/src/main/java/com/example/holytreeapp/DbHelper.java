@@ -16,7 +16,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String table_Column_Name="name";
     public static final String table_Column_Qnty="quantity";
     public static final String table_Column_Price="price";
-    ArrayList<CartItem> cart_db;
+    ArrayList<CartItem2> cart_db;
     public DbHelper(@Nullable Context context) {
         super(context, dataBase_name, null, 1);
     }
@@ -59,9 +59,9 @@ public class DbHelper extends SQLiteOpenHelper {
        db.update(tableName,cv,"name = ?",new String[]{name});
    }
 
-    public Integer deleteItem(String name){
+    public void deleteItem(String name){
         SQLiteDatabase db=getWritableDatabase();
-        return db.delete(tableName,"name = ?",new String[]{name});
+         db.delete(tableName,"name = ?",new String[]{name});
     }
     public int getSumValue() {
         int total=0;
@@ -74,13 +74,13 @@ public class DbHelper extends SQLiteOpenHelper {
         }
         return total;
     }
-    public ArrayList<CartItem> getAlldata(){
+    public ArrayList<CartItem2> getAlldata(){
         cart_db=new ArrayList<>();
         SQLiteDatabase db=this.getReadableDatabase();
         Cursor res=db.rawQuery("select * from "+tableName,null);
         res.moveToFirst();
         while(res.isAfterLast()==false){
-            cart_db.add(new CartItem(0,res.getString(res.getColumnIndex(table_Column_Name)),res.getString(res.getColumnIndex(table_Column_Price)),res.getString(res.getColumnIndex(table_Column_Qnty))));
+            cart_db.add(new CartItem2(res.getString(res.getColumnIndex(table_Column_Name)),res.getString(res.getColumnIndex(table_Column_Price)),res.getString(res.getColumnIndex(table_Column_Qnty))));
             res.moveToNext();
         }
         return cart_db;

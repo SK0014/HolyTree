@@ -46,7 +46,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="300dp"
                 android:layout_height="180dp"
-                android:src="@drawable/main"
+                android:src="@drawable/main_icon"
                 android:scaleType="centerCrop"
                 android:layout_marginBottom="8dp"
                 />

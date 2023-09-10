@@ -64,7 +64,7 @@ public class ProfileUpdate extends AppCompatActivity {
                                             @Override
                                             public void onSuccess(Void unused) {
                                                 Toast.makeText(ProfileUpdate.this, "Data has been Updated", Toast.LENGTH_SHORT).show();
-                                                startActivity(new Intent(ProfileUpdate.this,MainActivity.class));
+                                                startActivity(new Intent(ProfileUpdate.this,MainApp.class));
                                             }
                                         });
                                     }

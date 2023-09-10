@@ -17,12 +17,13 @@ import java.util.ArrayList;
 
 public class AddCart extends AppCompatActivity {
 RecyclerView recyclerView;
-CartAdapter cartAdapter;
-ArrayList<CartItem> arr;
+CartAdapter2 cartAdapter;
+ArrayList<CartItem2> arr;
 TextView total_prc;
 Button btn_pay;
 FirebaseFirestore fb;
 FirebaseAuth mauth;
+TextView itemsPrice,totalPay;
 DbHelper db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +45,8 @@ DbHelper db;
         arr=new ArrayList<>();
         db=new DbHelper(this);
         arr=db.getAlldata();
-        arr.add(new CartItem(1, "price ("+arr.size()+" Dishes)", "Rs "+String.valueOf(db.getSumValue()), "Free", "Rs "+String.valueOf(db.getSumValue())));
-        cartAdapter=new CartAdapter(getApplicationContext(),arr);
+        //arr.add(new CartItem(1, "price ("+arr.size()+" Dishes)", "Rs "+String.valueOf(db.getSumValue()), "Free", "Rs "+String.valueOf(db.getSumValue())));
+        cartAdapter=new CartAdapter2(getApplicationContext(),arr);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -54,7 +55,9 @@ DbHelper db;
         cartAdapter.notifyItemChanged(2);
         cartAdapter.notifyItemChanged(4);
         cartAdapter.notifyDataSetChanged();
-
-
+        totalPay=findViewById(R.id.total_pay);
+        itemsPrice=findViewById(R.id.total_items_price);
+        totalPay.setText("Rs "+String.valueOf(db.getSumValue()));
+        itemsPrice.setText("Rs "+String.valueOf(db.getSumValue()));
     }
 }
